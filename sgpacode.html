@@ -16,6 +16,7 @@
             padding-bottom: 2%;
         }
     </style>
+    <script src="sgpacode.js"></script>
 </head>
 <body>
     <div id="main">
@@ -23,7 +24,12 @@
         <form>
            Credits:<input type="number" id="totalcredit"><br><br>
            No Of Subjects:<input type="number" id="noofsub"><br><br>
-           <input type="button" value="SUBMIT" onclick="sgpabtn()">
+           <p id="subp">Enter Marks and Credit For Subject - 1</p>
+          
+           Enter Total Marks : <input type="text" id="marks"><br><br>
+           Enter Credit : <input type="text" id="credit"><br><br>
+           <input type="button" value="SUBMIT" onclick="scalc()">
+          
         </form>
     </div>
     

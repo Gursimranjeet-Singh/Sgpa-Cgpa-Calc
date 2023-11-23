@@ -1,26 +1,33 @@
-let globalcredit; // 
+let globalcredit;
 let globalsubject;
+let count = 0;
+let cgpa = 0;
 
-function sgpabtn() {
+
+
+function scalc() {
     globalcredit = document.getElementById("totalcredit").value;
-    globalsubject = document.getElementById("noofsub").value;
-    window.open("dataentry.html");
-}
-
-function calc() {
-    let count = 0;
-    let cgpa = 0;
-
-    while (count < globalsubject) {
-        cgpa += grade(document.getElementById("marks").value) * document.getElementById("credit").value;
-        count++; 
+    globalsubject = parseInt(document.getElementById("noofsub").value);
+    
+    
+    if (count < globalsubject) {
+        
+        document.getElementById("subp").innerHTML="Enter Marks and Credit For Subject - "+(count+2);
+        count++;
+        cgpa += grade(parseInt(document.getElementById("marks").value)) * parseInt(document.getElementById("credit").value);
+        document.getElementById("marks").value=" ";
+        document.getElementById("credit").value=" ";
+        
     }
 
-    cgpa /= parseInt(globalcredit); 
-    window.open("code.html");
-
-    
-    document.getElementById("codep").value = "Your CGPA is " + cgpa;
+    if(count >= globalsubject)  {
+        cgpa /= parseInt(globalcredit);
+        
+        
+        window.alert("Your CGPA is " + cgpa) ;
+    }
+    if(count >= globalsubject){
+    window.open("code.html");}
 }
 
 function grade(num) {
@@ -40,3 +47,4 @@ function grade(num) {
         return 0;
     }
 }
+
