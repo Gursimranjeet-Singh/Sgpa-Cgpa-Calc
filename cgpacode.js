@@ -6,34 +6,52 @@ let countsem = 1;
 let cgpa = 0;
 let sgpa = 0;
 
-// Initialize the semester prompt
-document.getElementById('semp').innerHTML = "Enter Details For Semester - 1";
+;
 
 function ccalc() {
-    globalcredit = parseInt(document.getElementById("totalcredit").value);
-    globalsubject = parseInt(document.getElementById("noofsub").value);
+    //this will take no of sem entered
     globalsem = parseInt(document.getElementById("noofsem").value);
-
-    if (count < globalsubject && countsem < globalsem) {
-        document.getElementById("subp").innerHTML = "Enter Marks and Credit For Subject - " + (count + 1);
-        count++;
+//this will take no of cridit entered
+    globalcredit = parseInt(document.getElementById("totalcredit").value);
+    //this will add no of subject entered
+    globalsubject = parseInt(document.getElementById("noofsub").value);
+    
+    
+//count 0  
+    if (count < globalsubject && countsem <= globalsem) {
+        
+        
         sgpa += grade(parseInt(document.getElementById("marks").value)) * parseInt(document.getElementById("credit").value);
         document.getElementById("marks").value = "";
         document.getElementById("credit").value = "";
+        count++;
+        if(count<globalsubject){
+            document.getElementById("subp").innerHTML = "Enter Marks and Credit For Subject - " + (count + 1);
+        }
+       else{
+        document.getElementById("subp").innerHTML = "Enter Marks and Credit For Subject - " +"1";
+       }
+       
+       
     }
 
-    if (count >= globalsubject && countsem < globalsem) {
-        // Increment the semester count AFTER checking the condition
-        countsem++; // Increment the semester count
-        document.getElementById('semp').innerHTML = "Enter Details For Semester - " + (countsem + 1);
-        sgpa = 0;
-        count = 0;
-        document.getElementById("noofsub").value = "";
-        document.getElementById("totalcredit").value = "";
-    }
 
-    if (count >= globalsubject && countsem >= globalsem) {
-        window.alert("CGPA is " + cgpa / globalsem);
+    if (count >= globalsubject && countsem <= globalsem) {
+        
+        cgpa+=sgpa/(globalcredit);
+        
+         countsem++; 
+         document.getElementById('semp').innerHTML = "Enter Details For Semester - " + (countsem);
+         sgpa = 0;
+         count = 0;
+         document.getElementById("noofsub").value = "";
+         document.getElementById("totalcredit").value = "";
+     }
+    
+
+    if (countsem > globalsem) {
+        window.alert("CGPA is " + (cgpa/globalsem));
+        open("code.html");
     }
 }
 
