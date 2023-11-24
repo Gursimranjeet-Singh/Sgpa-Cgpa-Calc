@@ -9,7 +9,6 @@ function scalc() {
     globalcredit = document.getElementById("totalcredit").value;
     globalsubject = parseInt(document.getElementById("noofsub").value);
     
-    
     if (count < globalsubject) {
         
         document.getElementById("subp").innerHTML="Enter Marks and Credit For Subject - "+(count+2);
@@ -26,8 +25,10 @@ function scalc() {
         
         window.alert("Your CGPA is " + cgpa) ;
     }
+
     if(count >= globalsubject){
-    window.open("code.html");}
+    window.open("code.html","_self");
+    }
 }
 
 function grade(num) {

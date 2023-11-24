@@ -1,0 +1,38 @@
+
+body{
+    background-image: url("images/img1.jpg");
+}
+#main {
+    background-image: url("images/img2.png");
+    border: 4px double white;
+    text-align: center;
+    width: 50%;
+    height: 50%;
+    position: relative;
+    margin-left: 25%;
+    margin-top: 13%;
+    padding-bottom: 2%;
+    color: white;
+  }
+  label:hover,h1:hover,#subp:hover,#semp:hover{
+    color: rgb(217, 217, 217);
+  }
+  label{
+    font-size: larger;
+  }
+  h1{
+    font-size: xx-large;
+    text-decoration:underline;
+  }
+  #subp,#semp{
+    font-size: x-large;
+  }
+  #codebtn{
+    background-color: black;
+    color: white;
+    border: 2px double white;
+  }
+  #codebtn:hover{
+    color: rgb(217, 217, 217);
+    border: 2px double rgb(217, 217, 217);
+  }

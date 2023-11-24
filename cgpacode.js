@@ -6,7 +6,7 @@ let countsem = 1;
 let cgpa = 0;
 let sgpa = 0;
 
-;
+
 
 function ccalc() {
     //this will take no of sem entered
@@ -16,15 +16,14 @@ function ccalc() {
     //this will add no of subject entered
     globalsubject = parseInt(document.getElementById("noofsub").value);
     
-    
-//count 0  
+     
     if (count < globalsubject && countsem <= globalsem) {
-        
         
         sgpa += grade(parseInt(document.getElementById("marks").value)) * parseInt(document.getElementById("credit").value);
         document.getElementById("marks").value = "";
         document.getElementById("credit").value = "";
         count++;
+
         if(count<globalsubject){
             document.getElementById("subp").innerHTML = "Enter Marks and Credit For Subject - " + (count + 1);
         }
@@ -32,14 +31,11 @@ function ccalc() {
         document.getElementById("subp").innerHTML = "Enter Marks and Credit For Subject - " +"1";
        }
        
-       
     }
-
 
     if (count >= globalsubject && countsem <= globalsem) {
         
         cgpa+=sgpa/(globalcredit);
-        
          countsem++; 
          document.getElementById('semp').innerHTML = "Enter Details For Semester - " + (countsem);
          sgpa = 0;
@@ -48,10 +44,9 @@ function ccalc() {
          document.getElementById("totalcredit").value = "";
      }
     
-
     if (countsem > globalsem) {
         window.alert("CGPA is " + (cgpa/globalsem));
-        open("code.html");
+        open("code.html","_self");
     }
 }
 

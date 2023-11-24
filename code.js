@@ -8,8 +8,8 @@ function submitmain() {
         }
     }
     if (check === "cgpa") {
-        window.open("cgpacode.html");
+        window.open("cgpacode.html","_self");
     } else {
-        window.open("sgpacode.html");
+        window.open("sgpacode.html","_self");
     }
 }
