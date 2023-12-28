@@ -57,7 +57,7 @@ function ccalc() {
 
     if (countsem > globalsem) {
         window.alert("CGPA is " + (cgpa / globalsem));
-        open("code.html", "_self");
+        open("../index.html", "_self");
     }
 }
 

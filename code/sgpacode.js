@@ -40,7 +40,7 @@ function scalc() {
     }
 
     if (count >= globalsubject) {
-        window.open("code.html", "_self");
+        window.open("../index.html", "_self");
     }
 }
 

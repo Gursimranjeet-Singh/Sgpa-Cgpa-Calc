@@ -1,4 +1,4 @@
-alert("Please read the data carefully.");
+
 function submitmain() {
     let check, i;
     for (i = 0; i < 2; i++) {
@@ -9,8 +9,8 @@ function submitmain() {
         }
     }
     if (check === "cgpa") {
-        window.open("cgpacode.html","_self");
+        window.open("markup/cgpacode.html","_self");
     } else {
-        window.open("sgpacode.html","_self");
+        window.open("markup/sgpacode.html","_self");
     }
 }
