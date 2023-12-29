@@ -1,10 +1,10 @@
-*{
+* {
   margin: 0px;
 }
-html{
+html {
   font-size: 62.5%;
 }
-body{
+body {
   background-image: url("img/img1.jpg");
   display: flex;
   flex-direction: column;
@@ -14,45 +14,89 @@ body{
 }
 #main {
   background-image: url("img/img2.jpg");
-    border: 4px double white;
-    width: 50vw;
-    display: flex;
-    flex-direction: column;
-    color: white;
-    align-items: center;
-    gap: 6vh;
+  border: 4px double white;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  align-items: center;
+  gap: 6vh;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vh;
+}
+
+label {
+  font-size: 1.5rem;
+  font-family: "Dancing Script", cursive;
+}
+h1 {
+  font-size: 3rem;
+  text-decoration: underline;
+  font-family: "Dancing Script", cursive;
+}
+#subp,
+#semp {
+  font-size: 2.5rem;
+  font-family: "Dancing Script", cursive;
+}
+#codebtn {
+  background-color: black;
+  mix-blend-mode: difference;
+  color: white;
+  border: 2px double white;
+  margin-bottom: 1rem;
+}
+#codebtn:hover {
+  color: rgb(217, 217, 217);
+  border: 2px double rgb(217, 217, 217);
+}
+#totalcredit,
+#noofsub,
+#marks,
+#credit {
+  display: block;
+}
+@media (min-height: 850px) {
+}
+@media (max-height: 850px) and (min-height: 715px) {
+  #h1 {
+    font-size: 2.5rem;
   }
-  form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1vh;
+}
+
+@media (max-height: 715px) and (min-height: 650px) {
+  #h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-height: 649px) and (min-height: 500px) {
+  #h1 {
+    font-size: 1.7rem;
   }
 
-  label{
-    font-size: 1.5rem;
-    font-family: 'Dancing Script', cursive;
+  #subp,
+  #semp {
+    font-size: 1.3rem;
   }
-  h1{
-    font-size: 3rem;
-    text-decoration:underline;
-    font-family: 'Dancing Script', cursive;
+}
+@media (max-height: 499px) and (min-height: 300px) {
+  #h1 {
+    font-size: 1.4rem;
   }
-  #subp,#semp{
-    font-size: 2.5rem;
-    font-family: 'Dancing Script', cursive;
+
+  #subp,
+  #semp {
+    font-size: 1.2rem;
+  }
+  label {
+    font-size: 0.9rem;
   }
   #codebtn{
-    background-color: black;
-    mix-blend-mode: difference;
-    color: white;
-    border: 2px double white;
-    margin-bottom: 1rem;
+    font-size: 0.9rem;
   }
-  #codebtn:hover{
-    color: rgb(217, 217, 217);
-    border: 2px double rgb(217, 217, 217);
-  }
-  #totalcredit,#noofsub,#marks,#credit{
-    display: block;
-  }
+}
