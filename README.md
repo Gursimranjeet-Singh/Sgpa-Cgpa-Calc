@@ -1,6 +1,5 @@
 # SGPA CGPA Calculator
 
-**Author: Gursimranjeet Singh**
 
 This project provides a web-based tool to calculate Semester Grade Point Average (SGPA) and Cumulative Grade Point Average (CGPA) using a combination of JavaScript, CSS, and HTML.
 
